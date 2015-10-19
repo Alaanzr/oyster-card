@@ -12,4 +12,8 @@ LIMIT = 90
     raise "Maximum top-up exceeded. Limit is #{Oystercard::LIMIT}" if (@balance + amount) > 90
     @balance += amount
   end
+
+  def deduct(amount)
+    @balance -= amount
+  end
 end
